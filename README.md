@@ -1,1 +1,0 @@
-# sweta_frontend_assignment
