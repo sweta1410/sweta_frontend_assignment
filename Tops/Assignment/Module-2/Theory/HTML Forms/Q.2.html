@@ -1,0 +1,23 @@
+Explain the difference between the GET and POST methods in form submission. When should each be used?
+Ans. * GET Method :-
+
+Data Visibility: Sends form data as URL parameters, making it visible in the browser's address bar.
+Data Length: Limited by the URL length (generally around 2000 characters).
+Caching: Can be cached and bookmarked since data is part of the URL.
+Use Cases:
+    -When retrieving data without causing side effects (e.g., search queries, filters).
+    -When sharing URLs with pre-filled form data (e.g., Google search results).
+
+* POST Method :-
+
+Data Visibility: Sends form data in the request body, making it invisible in the URL.
+Data Length: No significant limitations.
+Caching: Not cached or bookmarkable.
+Security: Safer for transmitting sensitive data like passwords (but should still use HTTPS).
+Use Cases:
+    - When submitting sensitive or large amounts of data.
+    - When making changes on the server (e.g., user registration, payment processing).
+
+* When to Use Each?
+Use GET when the request does not modify server data (e.g., search queries, navigation).
+Use POST when the request modifies or submits sensitive data (e.g., login, form submissions with personal details).

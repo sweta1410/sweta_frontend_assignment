@@ -1,0 +1,89 @@
+<!-- Create a simple webpage layout using Flexbox. The layout should include:
+A header.
+A sidebar on the left.
+A main content area in the center.
+A footer.
+
+Additional Requirements:
+Use Flexbox to position and align the elements.
+Apply different justify-content and align-items properties to observe their effects.
+Ensure the layout is responsive, adjusting for smaller screens. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: rgb(59, 59, 253);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    gap: 20px;
+}
+
+.sidebar {
+    background: rgb(53, 52, 52);
+    color: white;
+    padding: 20px;
+    flex: 1;
+}
+
+.content {
+    background: #dddcdc;
+    padding: 20px;
+    flex: 3; 
+}
+
+footer {
+    background: rgb(70, 70, 253);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar, .content {
+        flex: none; 
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <div class="container">
+        <aside class="sidebar">Sidebar</aside>
+        <main class="content">Main Content</main>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>

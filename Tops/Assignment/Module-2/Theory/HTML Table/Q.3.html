@@ -1,0 +1,14 @@
+Why should tables be used sparingly for layout purposes? What is a better alternative?
+Ans. Tables should be used sparingly for layout purposes because:
+
+Lack of Semantic Meaning : Tables are meant for displaying tabular data, not for structuring a webpage. Using them for layout makes it harder for assistive technologies (like screen readers) to interpret content correctly.
+Poor Accessibility : Screen readers may read tables in a way that confuses users, making navigation difficult for visually impaired individuals.
+Complex and Unmaintainable Code : Table-based layouts require extra <tr>, <td>, and <colspan> elements, making the HTML more cluttered and difficult to update.
+Slower Page Load Times : Tables load all their content before rendering, which can slow down a webpage. CSS-based layouts allow progressive rendering, improving performance.
+Responsive Design Issues : Tables do not adapt well to different screen sizes, making it challenging to create mobile-friendly designs without excessive workarounds.
+Better Alternative:
+Instead of tables, modern web development uses CSS for layout. The best options are:
+
+CSS Grid : Provides a powerful and flexible way to create two-dimensional layouts.
+CSS Flexbox : Ideal for one-dimensional layouts (either row or column-based).
+Media Queries : Ensure responsiveness by adapting layouts to different screen sizes.

@@ -1,0 +1,57 @@
+Explain the concept of CSS specificity. How do conflicts between multiple styles get resolved?
+Ans.  CSS Specificity: How Styles are Applied and Conflicts Resolved
+CSS specificity is a set of rules that determine which styles take precedence when multiple styles target the same element. It is essentially a ranking system that resolves conflicts between competing CSS rules.
+
+ How CSS Specificity Works:
+Each CSS selector has a specificity value, which is calculated based on the type of selectors used. The more specific a selector, the higher its priority.
+
+The specificity hierarchy is typically represented as (A, B, C, D):
+
+A → Inline styles (highest priority)
+B → ID selectors (#id)
+C → Class selectors, attribute selectors, and pseudo-classes (.class, [attr], :hover)
+D → Element selectors and pseudo-elements (div, h1, ::before)
+Each selector type contributes to its respective category, and values are compared from left to right.
+
+Specificity Calculation Example
+Consider the following CSS:
+
+css
+
+/* Specificity: (0, 1, 0, 0) */
+#main {
+  color: red;
+}
+
+/* Specificity: (0, 0, 1, 0) */
+.text {
+  color: blue;
+}
+
+/* Specificity: (0, 0, 0, 1) */
+p {
+  color: green;
+}
+
+/* Specificity: (1, 0, 0, 0) */
+<style>
+  p {
+    color: purple;
+  }
+</style>
+If all these styles apply to the same <p class="text" id="main">, the winning color would be red because #main (ID selector) has the highest specificity.
+
+  How Conflicts Are Resolved:
+Higher Specificity Wins
+
+A selector with higher specificity overrides one with lower specificity.
+Equal Specificity: Last Rule Wins
+
+If two selectors have the same specificity, the one that appears later in the CSS file takes precedence.
+Inline Styles Override External and Internal Styles
+
+Example:
+html
+
+<p style="color: orange;">This text is orange.</p>
+Even if CSS defines p { color: blue; }, the inline style wins.

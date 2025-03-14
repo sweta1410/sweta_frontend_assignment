@@ -1,0 +1,74 @@
+Explain the structure of an HTML table and the purpose of each of the following elements: <table>, <tr>, <th>, <td>, and <thead
+Ans. 1. <table> (Table Element) :-
+    This is the main container that holds all the rows and columns of the table.
+    It defines the table structure and can have attributes like border, cellspacing, and cellpadding.
+    Example:-
+    
+    html
+    
+    <table border="1">
+    </table>
+    
+    2. <tr> (Table Row):-
+    Represents a single row within a table.
+    It is used to group cells (<th> or <td>) into a horizontal row.
+    Example:
+    
+    html
+    
+    <tr>
+      <td>Row 1, Column 1</td>
+      <td>Row 1, Column 2</td>
+    </tr>
+
+    3. <th> (Table Header):-
+    Defines header cells in a table.
+    Usually, these cells are bold and centered by default.
+    Used to label columns or rows.
+    Example:
+    
+    html
+    
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+
+    4. <td> (Table Data Cell):-
+    Defines a standard data cell within a table.
+    Contains actual data for each row and column.
+    Example:
+    
+    html
+    
+    <tr>
+      <td>John</td>
+      <td>25</td>
+    </tr>
+
+    5. <thead> (Table Head Section):-
+    Groups all the header (<th>) elements together.
+    Helps with table organization and accessibility.
+    Example:
+    
+    html
+    
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>sweta</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Ankita</td>
+          <td>32</td>
+        </tr>
+      </tbody>
+    </table>
+    

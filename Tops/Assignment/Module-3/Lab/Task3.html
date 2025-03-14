@@ -1,0 +1,126 @@
+<!-- Create a 3x3 grid of product cards using CSS Grid. Each card should contain:
+A product image.
+A product title.
+A price.
+Additional Requirements:
+Use grid-template-columns to create the grid layout.
+Use grid-gap to add spacing between the grid items.
+Apply hover effects to each card for better interactivity. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d6d7d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.product-card {
+    background: #f0eeee;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 4px 6px rgba(56, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.5s;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #292828;
+}
+
+.product-card .price {
+    font-size: 16px;
+    color: #1bb33e;
+    font-weight: bold;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 6px 15px rgba(114, 0, 0, 0.15);
+}
+    </style>
+</head>
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="#" alt="Product 1">
+            <h3>Product 1</h3>
+            <p class="price">1000</p>
+        </div>
+
+        <div class="product-card">
+            <img src="#" alt="Product 2">
+            <h3>Product 2</h3>
+            <p class="price">2000</p>
+        </div>
+
+        <div class="product-card">
+            <img src="#" alt="Product 3">
+            <h3>Product 3</h3>
+            <p class="price">3000</p>
+        </div>
+
+        <div class="product-card">
+            <img src="#" alt="Product 4">
+            <h3>Product 4</h3>
+            <p class="price">4000</p>
+        </div>
+
+        <div class="product-card">
+            <img src="#" alt="Product 5">
+            <h3>Product 5</h3>
+            <p class="price">5000</p>
+        </div>
+
+        <div class="product-card">
+            <img src="#" alt="Product 6">
+            <h3>Product 6</h3>
+            <p class="price">6000</p>
+        </div>
+
+        <div class="product-card">
+            <img src="#" alt="Product 7">
+            <h3>Product 7</h3>
+            <p class="price">7000</p>
+        </div>
+
+        <div class="product-card">
+            <img src="#" alt="Product 8">
+            <h3>Product 8</h3>
+            <p class="price">8000</p>
+        </div>
+
+        <div class="product-card">
+            <img src="#" alt="Product 9">
+            <h3>Product 9</h3>
+            <p class="price">9000</p>
+        </div>
+    </div>
+</body>
+</html>

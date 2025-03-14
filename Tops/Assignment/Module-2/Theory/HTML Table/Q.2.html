@@ -1,0 +1,40 @@
+What is the difference between colspan and rowspan in tables? Provide examples.
+Ans.    1. colspan :-
+It allows a single cell to span across multiple columns.
+Used when you want a cell to take up more than one column.
+
+Example of colspan:-
+html
+
+<table border="1">
+    <tr>
+        <th colspan="2">Header 1 & 2</th>
+        <th>Header 3</th>
+    </tr>
+    <tr>
+        <td>Row 1, Col 1</td>
+        <td>Row 1, Col 2</td>
+        <td>Row 1, Col 3</td>
+    </tr>
+</table>
+
+2. rowspan :-
+It allows a single cell to span across multiple rows.
+Used when you want a cell to take up more than one row.
+
+Example of rowspan:-
+html
+
+<table border="1">
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Row 1 & 2, Col 1</td>
+        <td>Row 1, Col 2</td>
+    </tr>
+    <tr>
+        <td>Row 2, Col 2</td>
+    </tr>
+</table>

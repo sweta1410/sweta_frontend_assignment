@@ -1,0 +1,93 @@
+What is the difference between internal, external, and inline CSS? Discuss the advantages and disadvantages of each approach.
+Ans.  1. Internal CSS:
+Internal CSS is written inside the <style> tag within the <head> section of an HTML document.
+
+Example:
+html
+
+<html>
+<head>
+    <style>
+        body {
+            background-color: blue;
+        }
+        h1 {
+            color: navy;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+</body>
+</html>
+
+* Advantages:
+Keeps styling in the same file, making it easier to manage for small projects.
+No need for additional HTTP requests since the styles are within the HTML document.
+Useful when styles are specific to a single page.
+
+* Disadvantages:
+Makes the HTML document larger, increasing load time.
+Difficult to maintain for larger projects as styles cannot be shared across multiple pages.
+Reduces the separation of concerns between content (HTML) and styling (CSS).
+
+2. External CSS:
+External CSS is written in a separate .css file and linked to the HTML document using the <link> tag.
+
+Example:
+styles.css
+
+css
+
+body {
+    background-color: lightblue;
+}
+h1 {
+    color: navy;
+}
+index.html
+
+html
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Hello, World!</h1>
+</body>
+</html>
+
+* Advantages:
+Allows for consistent styling across multiple pages.
+Keeps the HTML file clean and improves readability.
+Enables faster loading of web pages since CSS files can be cached by browsers.
+Encourages separation of concerns (HTML for content, CSS for styling).
+
+* Disadvantages:
+Requires an additional HTTP request to fetch the CSS file, which may slightly delay page load times.
+If the external file is not loaded or is missing, the page will appear unstyled.
+Initial setup takes slightly more effort compared to internal or inline CSS.
+
+3. Inline CSS:
+Inline CSS is applied directly to individual HTML elements using the style attribute.
+
+Example:
+html
+
+<html>
+<body>
+    <h1 style="color: navy; background-color: lightblue;">Hello, World!</h1>
+</body>
+</html>
+
+* Advantages:
+Useful for applying quick fixes or styling specific elements.
+No need for a separate CSS file, making it easy for small tweaks.
+Overrides both internal and external styles due to its high specificity.
+
+* Disadvantages:
+Hard to maintain, especially for large projects.
+Reduces code readability and increases redundancy.
+Does not support CSS features like media queries, pseudo-classes, or reusability.
+Bloats the HTML file and can make debugging difficult.

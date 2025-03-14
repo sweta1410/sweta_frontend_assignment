@@ -1,0 +1,80 @@
+Describe the grid-template-columns, grid-template-rows, and grid- gap properties. Provide examples of how to use them.
+Ans. 1. grid-template-columns:
+The grid-template-columns property defines the number and width of columns in a grid container.
+
+Example:
+css
+
+.container {
+  display: grid;
+  grid-template-columns: 100px 200px 150px; 
+}
+* This creates a grid with:
+
+First column: 100px
+Second column: 200px
+Third column: 150px
+Using Flexible Units (fr, auto, %)
+css
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+* Here, the fr unit divides the space proportionally:
+
+First and third columns: 1 fraction of space
+Second column: 2 fractions of space
+
+2. grid-template-rows:
+The grid-template-rows property defines the height of rows in the grid.
+
+Example:
+css
+
+.container {
+  display: grid;
+  grid-template-rows: 100px 200px;
+}
+* This creates:
+
+First row: 100px
+Second row: 200px
+Using Auto and Flexible Heights
+css
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr 2fr;
+}
+* Here:
+
+First row: Automatically sized based on content
+Second row: 1 fraction of available space
+Third row: 2 fractions of available space
+
+3. grid-gap (Deprecated) → Use gap Instead
+The grid-gap property (now just gap) defines the spacing between grid columns and rows.
+
+Example:
+css
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 20px; 
+}
+* The gap property:
+
+Adds 20px space between grid cells in both rows and columns.
+Separate Row and Column Gaps
+css
+Copy
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  row-gap: 30px;
+  column-gap: 10px; 
+}

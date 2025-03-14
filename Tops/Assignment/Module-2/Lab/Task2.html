@@ -1,0 +1,85 @@
+<!-- Create a contact form with the following fields:
+Full name (text input)
+Email (email input)
+Phone number (tel input)
+Subject (dropdown menu)
+Message (textarea)
+Submit button
+Additional Requirements:
+Use appropriate form validation using required, minlength, maxlength, and pattern.
+Link form labels with their corresponding inputs using the for attribute. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: antiquewhite;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #a7a6a6;
+            border-radius: 5px;
+            background: #dddddd;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 15px;
+            background: #1c6b2e;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" maxlength="50">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject">
+            <option value="">-- Select a Subject --</option>
+            <option value="inquiry">Inquiry</option>
+            <option value="support">Support</option>
+            <option value="feedback">Feedback</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required minlength="10" maxlength="500"></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

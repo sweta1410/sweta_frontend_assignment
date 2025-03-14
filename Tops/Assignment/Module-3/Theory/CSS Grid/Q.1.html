@@ -1,0 +1,38 @@
+Explain CSS Grid and how it differs from Flexbox. When would you use Grid over Flexbox?
+Ans. CSS Grid:
+CSS Grid is a two-dimensional layout system that allows you to define both rows and columns. It enables precise placement of elements within a grid structure.
+
+Features of CSS Grid:
+ Works in two dimensions (rows & columns).
+ Uses grid container (display: grid;) and grid items.
+ Supports explicit (grid-template-rows, grid-template-columns) and implicit (grid-auto-rows, grid-auto-columns) grid definitions.
+ Offers grid gap (gap, row-gap, column-gap) for spacing.
+ Allows items to span multiple rows and columns using grid-column and grid-row.
+ Supports alignment properties (justify-items, align-items, place-items).
+ Has the fr (fractional unit), which dynamically distributes space.
+
+ Flexbox:
+
+Flexbox is a one-dimensional layout system that aligns items either in a row or a column, but not both at the same time.
+
+Features of Flexbox:
+ Works in one dimension (either row or column).
+ Uses a flex container (display: flex;) and flex items.
+ Supports flexible sizing with flex-grow, flex-shrink, and flex-basis.
+ Uses justify-content, align-items, and align-self for alignment.
+ Provides flex-wrap for wrapping elements onto new lines.
+
+ Use Grid When:
+- You need a structured layout with rows and columns (e.g., website layouts, dashboards).
+- Elements need to span multiple rows or columns.
+- You want precise control over placement.
+
+Use Flexbox When:
+- You have a simple row or column layout (e.g., navigation bars, form fields, buttons).
+- You need dynamic and flexible sizing without a strict structure.
+- You need to align content responsively.
+
+
+* You can mix both systems. For example:
+Use CSS Grid for the main layout structure.
+Use Flexbox inside grid items to align content.
