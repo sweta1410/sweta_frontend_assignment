@@ -1,0 +1,44 @@
+What is the font-family property in CSS? How do you apply a custom Google Font to a webpage?
+Ans. The font-family property in CSS is used to specify the font for the text content of an element. It allows you to set one or more fonts as fallback options. If the first font is not available on the user's system, the browser will try the next font in the list, and so on.
+
+Applying a Custom Google Font to a Webpage
+Google Fonts offers a large collection of free web fonts that you can easily integrate into your webpage. Here's how to apply a custom Google Font:
+
+Go to Google Fonts: Visit Google Fonts and choose a font that you like.
+
+Select the Font: After selecting a font, you can customize the style (e.g., regular, bold, italic) if needed.
+
+Copy the Embed Code: Google Fonts will provide an HTML link to include in the <head> of your HTML file. Here's an example of what it might look like for the "Roboto" font:
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+Include the Link in the <head> Section of Your HTML: Add the link to your HTML document, inside the <head> tag:
+
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+Apply the Font in CSS: Use the font-family property in your CSS to apply the font to your webpage:
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+Full Example:
+Here is a full example where we use the "Roboto" font from Google Fonts:
+
+HTML:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Google Font Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Welcome to My Webpage</h1>
+  <p>This is a paragraph of text using the Roboto font.</p>
+</body>
+</html>
