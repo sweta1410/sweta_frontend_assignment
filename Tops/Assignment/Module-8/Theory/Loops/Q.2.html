@@ -1,0 +1,30 @@
+Q. What is the difference between a while loop and a do-while loop?
+
+Ans. while Loop (Entry-Controlled Loop)
+Condition Check: Evaluated before the loop body executes.
+Execution Guarantee: The loop body may not execute at all if the condition is initially false.
+Use Case: Ideal when the number of iterations is not predetermined and the loop should 
+only execute if the condition is true from the outset.
+
+Example:
+
+int i = 0;
+while (i < 5) {
+    printf("%d\n", i);
+    i++;
+}
+
+* do-while Loop (Exit-Controlled Loop)
+Condition Check: Evaluated after the loop body executes.
+
+Execution Guarantee: The loop body executes at least once, regardless of the condition.
+
+Use Case: Suitable when the loop must run at least once, such as prompting user input 
+before validation.
+
+Example:
+int i = 0;
+do {
+    printf("%d\n", i);
+    i++;
+} while (i < 5);

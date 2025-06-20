@@ -1,0 +1,47 @@
+Q. What are functions in JavaScript? Explain the syntax for declaring and calling a function.
+Ans. In JavaScript, functions are reusable blocks of code designed to perform specific tasks. 
+They help in organizing code, promoting reusability, and improving maintainability.
+
+Declaring Functions in JavaScript:
+There are several ways to declare functions in JavaScript:
+
+1. Function Declaration
+This is the most common method. It defines a named function using the function keyword.
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+Function declarations are hoisted, meaning they can be called before their definition in the code. 
+
+2. Function Expression:
+
+A function can also be defined and assigned to a variable. This method is known as a function expression.
+const greet = function(name) {
+  return "Hello, " + name + "!";
+};
+Function expressions are not hoisted, so they cannot be called before their definition. 
+
+3. Arrow Function Expression (ES6):
+Introduced in ES6, arrow functions provide a concise syntax for writing functions.
+
+const greet = (name) => "Hello, " + name + "!";
+Arrow functions do not have their own this binding and are not suitable for defining 
+object methods. 
+
+Calling Functions in JavaScript
+To execute a function, you invoke it by using its name followed by parentheses. 
+If the function requires parameters, you pass them within the parentheses.
+
+Example:
+function add(a, b) {
+  return a + b;
+}
+
+let result = add(5, 3); // result is 8
+Alternatively, you can use the call() method to invoke a function with a specified this value and arguments provided individually.
+
+function greet() {
+  return "Hello, " + this.name;
+}
+
+const person = { name: "Alice" };
+greet.call(person); 

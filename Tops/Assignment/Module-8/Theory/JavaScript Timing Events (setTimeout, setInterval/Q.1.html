@@ -1,0 +1,43 @@
+Q. Explain the setTimeout() and setInterval() functions in JavaScript. 
+How are they used for timing events?
+Ans. setTimeout(): Execute Code After a Delay
+The setTimeout() function schedules a single execution of a function after a 
+specified delay (in milliseconds).
+
+Syntax:
+setTimeout(function, delay, ...args);
+function: The function to execute.
+delay: Time in milliseconds to wait before execution.
+...args: Optional arguments passed to the function.
+
+Example:
+setTimeout(() => {
+  console.log("Executed after 2 seconds");
+}, 2000);
+Canceling a Timeout:
+const timeoutId = setTimeout(myFunction, 5000);
+clearTimeout(timeoutId); // Cancels the scheduled execution
+
+* setInterval(): Execute Code at Regular Intervals
+The setInterval() function repeatedly executes a function at specified intervals (in milliseconds).
+
+Syntax:
+setInterval(function, interval, ...args);
+function: The function to execute.
+interval: Time in milliseconds between each execution.
+...args: Optional arguments passed to the function.
+
+Example:
+const intervalId = setInterval(() => {
+  console.log("Executed every 1 second");
+}, 1000);
+Stopping an Interval:
+clearInterval(intervalId); // Stops the repeated execution
+
+Choosing Between setTimeout() and setInterval():
+Use setTimeout() when you need to execute a function once after a delay.
+Use setInterval() for repeated execution at regular intervals.
+For precise control, especially when the execution time of the function may vary, 
+consider using recursive setTimeout() calls instead of setInterval(). 
+This approach schedules the next execution only after the current one completes, 
+preventing potential overlaps. 

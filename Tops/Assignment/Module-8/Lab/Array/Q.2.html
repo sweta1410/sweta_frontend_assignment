@@ -1,0 +1,23 @@
+<!--Write a program to find the sum of all elements in an array of numbers.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sumArray(arr) {
+  return arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+}
+
+// Example usage:
+const numbers = [1, 2, 3, 4, 5];
+const total = sumArray(numbers);
+console.log("Sum of array elements:", total); // Output: 15
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+Q. Explain the methods getElementById(), getElementsByClassName(), and querySelector() used to select elements from the DOM.
+Ans. 1. getElementById()
+Purpose: Selects a single element by its unique id.
+
+Syntax:
+document.getElementById('elementId');
+Returns: The first element with the given id, or null if not found.
+
+Example:
+<div id="header">Welcome</div>
+<script>
+  const header = document.getElementById('header');
+  console.log(header.textContent); // Output: Welcome
+</script>
+
+2. getElementsByClassName()
+Purpose: Selects multiple elements with the same class name.
+
+Syntax:
+document.getElementsByClassName('className');
+Returns: A live HTMLCollection of matching elements (not an array).
+
+Example:
+<p class="note">Note 1</p>
+<p class="note">Note 2</p>
+<script>
+  const notes = document.getElementsByClassName('note');
+  console.log(notes[0].textContent); // Output: Note 1
+</script>
+
+3. querySelector()
+Purpose: Selects the first element that matches a CSS selector.
+Syntax:
+document.querySelector('selector');
+Returns: The first matching Element or null if not found.
+
+Can use CSS-style selectors:
+#id
+.class
+tag, etc.
+
+Example:
+<div class="box">Hello</div>
+<script>
+  const box = document.querySelector('.box');
+  console.log(box.textContent); // Output: Hello
+</script> 

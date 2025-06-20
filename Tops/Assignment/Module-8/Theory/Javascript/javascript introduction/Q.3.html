@@ -1,0 +1,44 @@
+Discuss the use of <script> tag in HTML. How can you link an external JavaScript file to an HTML document?
+
+Ans. The <script> tag in HTML is used to embed or reference JavaScript code within a web page. 
+   
+Usage of <script> Tag:
+
+Inline JavaScript: You can write JavaScript code directly inside the HTML document.
+<script>
+  alert('Hello, World!');
+</script>
+External JavaScript: You can link to a separate JavaScript file using the src attribute of the <script> tag.
+
+<script src="script.js"></script>
+Placement of <script> Tag
+Traditionally, <script> tags were placed in the <head> section, but this could delay page rendering.
+
+For better performance, they are often placed just before the closing </body> tag so the HTML loads
+before the JavaScript runs.
+Alternatively, the defer or async attributes can be used when placing scripts in the <head>:
+
+defer: Executes the script after the HTML is fully parsed.
+<script src="script.js" defer></script>
+
+async: Executes the script as soon as it's loaded, without waiting for HTML parsing.
+
+<script src="script.js" async></script>
+Example of Linking External JavaScript
+
+HTML File (index.html):
+<html>
+<head>
+  <title>My Web Page</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Welcome</h1>
+</body>
+</html>
+JavaScript File (script.js):
+
+javascript
+document.addEventListener("DOMContentLoaded", function() {
+  console.log("Page is fully loaded.");
+});

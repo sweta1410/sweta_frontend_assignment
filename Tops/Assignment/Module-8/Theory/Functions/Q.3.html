@@ -1,0 +1,78 @@
+Q. Discuss the concept of parameters and return values in functions.
+Ans. Parameters in Java Methods
+Parameters are variables listed in a method's declaration. They act as placeholders for the
+values (arguments) that you pass to the method when invoking it.
+
+* Declaring Parameters
+Parameters are specified within the parentheses following the method name. 
+Each parameter must have a defined type. For example:
+
+public void greet(String name) {
+    System.out.println("Hello, " + name + "!");
+}
+In this example, name is a parameter of type String. When you call greet("Alice");, 
+the method will output:
+
+Hello, Alice!
+
+* Multiple Parameters
+A method can have multiple parameters, separated by commas:
+
+public void displayInfo(String name, int age) {
+    System.out.println(name + " is " + age + " years old.");
+}
+Calling displayInfo("Bob", 30); will output:
+
+Bob is 30 years old.
+Parameters vs. Arguments
+Parameters are variables in the method declaration.
+
+Arguments are the actual values passed to the method when it is called.
+
+For instance, in the call greet("Alice");, "Alice" is the argument corresponding to the parameter name.
+
+Passing by Value
+Java uses pass-by-value for method parameters:
+
+Primitive types (e.g., int, double) are passed by value, meaning the method receives a copy of the value. Changes to the parameter within the method do not affect the original variable.
+
+Object references are also passed by value, but the value is the reference to the object. This means that while the reference itself is a copy, both the original and the copy point to the same object. Therefore, changes to the object's fields within the method affect the original object.
+
+For more details, refer to GeeksforGeeks on Java Method Parameters.
+
+Return Values in Java Methods
+A return value is the result that a method sends back to the caller after execution.
+Stack Overflow
+
+Declaring Return Types
+When defining a method, you specify its return type before the method name. If the method does not return a value, you use the void keyword.
+Oracle Docs
+
+public int add(int a, int b) {
+    return a + b;
+}
+In this example, the method add returns an int value, which is the sum of a and b.
+
+Using the return Statement
+The return statement is used to exit a method and optionally pass back a value:
+
+public boolean isEven(int number) {
+    return number % 2 == 0;
+}
+Here, isEven returns a boolean indicating whether the input number is even.
+
+ Void Methods
+Methods declared with void do not return a value:
+Oracle Docs
+
+public void printMessage(String message) {
+    System.out.println(message);
+}
+Such methods perform an action but do not provide a result to the caller.
+
+ Returning Objects
+Methods can also return objects:
+
+public String getGreeting(String name) {
+    return "Hello, " + name + "!";
+}

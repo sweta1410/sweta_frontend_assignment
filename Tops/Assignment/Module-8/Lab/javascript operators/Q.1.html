@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Operators Example</title>
+</head>
+<body>
+  <h2>JavaScript Operators Demo</h2>
+  <label for="num1">Enter first number: </label>
+  <input type="number" id="num1" /><br/></br>
+  <label for="num2">Enter second number: </label>
+  <input type="number" id="num2" /><br/>
+  <button onclick="performOperations()">Calculate</button>
+
+  <div id="results"></div>
+
+  <script>
+    function performOperations() {
+
+      let a = parseFloat(document.getElementById('num1').value);
+      let b = parseFloat(document.getElementById('num2').value);
+      const sum = a + b;
+      const difference = a - b;
+      const product = a * b;
+      const quotient = b !== 0 ? (a / b) : "Undefined (division by zero)";
+
+      // Comparison operations
+      const isEqual = a === b;
+      const isAGreater = a > b;
+
+      // Logical operation: Check if a > 10 AND b < 5
+      const logicalCheck = (a > 10) && (b < 5);
+
+      // Display results
+      document.getElementById('results').innerHTML = `
+        <h3>Results:</h3>
+        <p><strong>Arithmetic Operations:</strong></p>
+        <ul>
+          <li>a + b = ${sum}</li>
+          <li>a - b = ${difference}</li>
+          <li>a * b = ${product}</li>
+          <li>a / b = ${quotient}</li>
+        </ul>
+        <p><strong>Comparison Operations:</strong></p>
+        <ul>
+          <li>a === b: ${isEqual}</li>
+          <li>a > b: ${isAGreater}</li>
+        </ul>
+        <p><strong>Logical Operation:</strong></p>
+        <ul>
+          <li>(a > 10) && (b < 5): ${logicalCheck}</li>
+        </ul>
+      `;
+    }
+  </script>
+</body>
+</html>

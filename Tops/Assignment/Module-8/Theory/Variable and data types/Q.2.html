@@ -1,0 +1,77 @@
+Q. Explain the different data types in JavaScript. Provide examples for each.
+Ans. Primitive Data Types:
+Primitive types are immutable and represent a single value.
+
+String:
+
+Represents textual data.
+
+Example:
+let name = "Alice";
+Number
+
+Represents both integers and floating-point numbers.
+
+Example:
+
+let age = 30;
+let price = 99.99;
+BigInt
+
+Used for integers beyond the safe integer limit for Number.
+
+Example:
+
+let bigNumber = 1234567890123456789012345678901234567890n;
+Boolean
+
+Represents logical entities: true or false.
+
+Example:
+
+let isAvailable = true;
+Undefined
+
+Indicates a variable has been declared but not assigned a value.
+
+Example:
+
+let x;
+console.log(x); // undefined
+Null
+
+Represents the intentional absence of any object value.
+
+Example:
+let data = null;
+Symbol
+
+Introduced in ES6, symbols are unique and immutable identifiers.
+
+Example:
+
+javascript
+const sym1 = Symbol("id");
+const sym2 = Symbol("id");
+console.log(sym1 === sym2); // false
+
+*  Non-Primitive Data Type
+Non-primitive types can hold multiple values and are mutable.
+
+Object
+A collection of key-value pairs.
+
+Example:
+const person = {
+  name: "Bob",
+  age: 25
+};
+Arrays and functions are specialized objects:
+
+Array Example:
+const colors = ["red", "green", "blue"];
+
+Function Example:
+function greet() {
+  console.log("Hello!");
+}

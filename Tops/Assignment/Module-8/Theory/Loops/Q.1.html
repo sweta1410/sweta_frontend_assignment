@@ -1,0 +1,54 @@
+Q. Explain the different types of loops in JavaScript (for, while, do-while). Provide a basic example of each.
+Ans.  In JavaScript, loops are essential for executing a block of code multiple times. 
+The primary loop constructs are for, while, and do...while, each serving different
+purposes based on the specific requirements of your code. Here's an overview of each, 
+along with basic examples:
+
+1. for Loop
+Purpose: Ideal when the number of iterations is known beforehand.
+
+Syntax:
+for (initialization; condition; increment) {
+}
+
+Example:
+for (let i = 0; i < 5; i++) {
+  console.log("For loop iteration:", i);
+}
+Explanation: This loop initializes i to 0, checks if i is less than 5, 
+executes the code block, and then increments i by 1 in each iteration.
+
+2. while Loop
+Purpose: Suitable when the number of iterations is not known and depends 
+on a condition evaluated before each iteration.
+
+Syntax:
+while (condition) {
+}
+Example:
+let j = 0;
+while (j < 5) {
+  console.log("While loop iteration:", j);
+  j++;
+}
+Explanation: The loop continues to execute as long as j is less than 5, 
+incrementing j by 1 in each iteration.
+
+3. do...while Loop
+Purpose: Ensures that the code block is executed at least once, with the 
+condition evaluated after each execution.
+
+Syntax:
+do {
+
+} while (condition);
+
+Example:
+let k = 0;
+do {
+  console.log("Do-while loop iteration:", k);
+  k++;
+} while (k < 5);
+Explanation: The code block executes once before checking if k is less than 5, 
+ensuring at least one execution regardless of the condition.
+

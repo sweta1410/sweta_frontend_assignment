@@ -1,0 +1,32 @@
+Q. What is the DOM (Document Object Model) in JavaScript? How does JavaScript interact with the DOM?
+Ans. The Document Object Model (DOM) is a programming interface for web documents. 
+It represents the structure of an HTML or XML document as a hierarchical tree of objects,
+ where each node corresponds to a part of the document, such as elements, attributes, or text. 
+ This model allows programming languages like JavaScript to interact with and manipulate the 
+ content, structure, and style of web pages dynamically.
+
+ How JavaScript Interacts with the DOM
+ JavaScript can access and manipulate the DOM using various methods and properties provided by the DOM API.
+This interaction enables dynamic changes to the web page without requiring a full reload. 
+
+ Accessing Elements
+ document.getElementById('id'): Selects an element by its unique ID.
+ document.getElementsByClassName('class'): Selects all elements with the specified class.
+ document.getElementsByTagName('tag'): Selects all elements with the specified tag name.
+ document.querySelector('selector'): Selects the first element that matches the CSS selector.
+ document.querySelectorAll('selector'): Selects all elements that match the CSS selector.
+ 
+ Modifying Elements
+ element.textContent = 'New Text': Changes the text content of an element.
+ element.innerHTML = '<span>New HTML</span>': Sets the HTML content inside an element.
+ element.setAttribute('attribute', 'value'): Sets the value of an attribute.
+ element.style.property = 'value': Changes the inline CSS style of an element.
+ 
+ Adding and Removing Elements
+ document.createElement('tag'): Creates a new HTML element.
+ parent.appendChild(child): Adds a child element to a parent.
+ element.remove(): Removes an element from the DOM.
+ 
+Event Handling
+ element.addEventListener('event', function): Attaches an event handler to an element.
+ element.removeEventListener('event', function): Removes an event handler from an element.

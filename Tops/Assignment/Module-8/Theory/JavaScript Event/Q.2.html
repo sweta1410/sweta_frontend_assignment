@@ -1,0 +1,59 @@
+How does the addEventListener() method work in JavaScript? Provide an example.
+Ans. The addEventListener() method in JavaScript is used to attach an event handler 
+to a specified element, allowing you to execute a function when a particular event occurs. This method provides a flexible way to handle events without overwriting existing event handlers.
+
+Syntax:
+element.addEventListener(event, function, useCapture);
+event: A string representing the event type to listen for (e.g., 'click', 'mouseover').
+
+function: The function to execute when the event occurs.
+
+useCapture (optional): A boolean indicating whether to use event capturing. 
+Defaults to false (event bubbling).
+
+Example
+Here's a simple example demonstrating how to use addEventListener() to change the
+text of a paragraph when a button is clicked:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>addEventListener Example</title>
+</head>
+<body>
+  <button id="myButton">Click Me</button>
+  <p id="myText">Hello, World!</p>
+
+  <script>
+    const button = document.getElementById('myButton');
+    const text = document.getElementById('myText');
+
+    button.addEventListener('click', function() {
+      text.textContent = 'Button was clicked!';
+    });
+  </script>
+</body>
+</html>
+In this example, when the button with the ID myButton is clicked, the text content 
+of the paragraph with the ID myText changes to Button was clicked.
+
+Event Propagation: Bubbling and Capturing
+JavaScript events propagate through the DOM in two phases: capturing and bubbling.
+
+Capturing Phase: The event starts from the root and travels down to the target element.
+
+Bubbling Phase: The event starts from the target element and bubbles up to the root.
+
+By default, addEventListener() uses the bubbling phase. To use the capturing phase, 
+set the useCapture parameter to true. 
+
+Advantages of addEventListener()
+Multiple Handlers: Allows attaching multiple handlers to the same event on an element.
+
+Separation of Concerns: Keeps HTML and JavaScript separate, enhancing maintainability.
+
+Control Over Propagation: Provides options to control event propagation phases.
+
+Flexibility: Can be used with various event types and on different DOM elements.
+
+

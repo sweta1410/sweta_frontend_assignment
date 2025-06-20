@@ -1,0 +1,57 @@
+Q. Explain how to access and update object properties using dot notation and bracket notation.
+Ans. Dot Notation:-
+Syntax:
+object.propertyName
+
+Usage:
+Use when the property name is a valid JavaScript identifier (i.e., it doesn't contain spaces, hyphens, or start with a number).
+Ideal when property names are known and static.
+
+
+Example:
+const person = {
+  name: "Alice",
+  age: 30
+};
+
+console.log(person.name); // Output: "Alice"
+person.age = 31;          // Updates the age property
+
+* Bracket Notation
+Syntax:
+object["propertyName"]
+
+Usage:
+Use when the property name is dynamic or not a valid JavaScript identifier.
+Allows property names with spaces, special characters, or those stored in variables.
+
+Examples:
+
+const person = {
+  "first name": "Bob",
+  age: 25
+};
+
+console.log(person["first name"]); // Output: "Bob"
+
+const prop = "age";
+console.log(person[prop]);         // Output: 25
+
+person["last name"] = "Smith";     // Adds a new property
+
+*Advantages:
+Flexibility in accessing properties dynamically.
+Essential when dealing with user-generated property names or data from external sources.
+
+* Updating Properties:
+Both notations can be used to update existing properties or add new ones:
+
+Dot Notation:
+person.name = "Charlie";
+Bracket Notation:
+
+person["name"] = "Charlie";
+When the property name is dynamic or invalid as an identifier, bracket notation is necessary:
+
+const key = "favorite color";
+person[key] = "blue";

@@ -1,0 +1,18 @@
+<!--What is the difference between == and === in JavaScript?-->
+== (Loose Equality)
+Type Coercion: Before comparison, == converts the operands to the same type. This process is known as type coercion.
+
+Comparison: After type conversion, it compares the values.
+
+Example:
+console.log("10" == 10); // Output: true
+In this example, the string "10" is coerced to the number 10, so the comparison returns true.
+
+
+=== (Strict Equality)
+No Type Coercion: === does not perform any type conversion. It compares both the value and the type of the operands.
+
+Comparison: If the operands are of different types, the comparison returns false.
+
+Example:
+console.log("10" === 10); // Output: false

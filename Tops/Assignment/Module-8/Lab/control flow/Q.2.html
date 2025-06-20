@@ -1,0 +1,49 @@
+<!--Create a JavaScript program using a switch statement to display the day of the week based on the user input (e.g., 1 for Monday, 2 for Tuesday, etc.).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day of the Week</title>
+</head>
+<body>
+  <input type="number" id="dayInput" placeholder="Enter number 1–7" />
+  <button onclick="showDay()">Submit</button>
+  <p id="result"></p>
+
+  <script>
+    function showDay() {
+      const input = document.getElementById('dayInput').value;
+      const dayNumber = parseInt(input, 10);
+      let message = '';
+
+      switch (dayNumber) {
+        case 1:
+          message = "Monday";
+          break;
+        case 2:
+          message = "Tuesday";
+          break;
+        case 3:
+          message = "Wednesday";
+          break;
+        case 4:
+          message = "Thursday";
+          break;
+        case 5:
+          message = "Friday";
+          break;
+        case 6:
+          message = "Saturday";
+          break;
+        case 7:
+          message = "Sunday";
+          break;
+        default:
+          message = "Not a valid day of the week";
+      }
+
+      document.getElementById('result').textContent = message;
+    }
+  </script>
+</body>
+</html>

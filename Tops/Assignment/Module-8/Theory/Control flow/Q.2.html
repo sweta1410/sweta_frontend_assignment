@@ -1,0 +1,36 @@
+Q. Describe how switch statements work in JavaScript. When should you use a
+switch statement instead of if-else?
+Ans. How switch Statements Work
+The switch statement evaluates an expression and compares its result to the values specified in each case clause.
+When a match is found, the corresponding block of code executes. If no match is found, the default block (if provided) executes.
+
+Syntax:
+switch (expression) {
+  case value1:
+    // Code to execute if expression === value1
+    break;
+  case value2:
+    // Code to execute if expression === value2
+    break;
+  // Add more cases as needed
+  default:
+    // Code to execute if no case matches
+}
+Example:
+const fruit = "Mango";
+
+switch (fruit) {
+  case "Apple":
+    console.log("Apples are $1.00 each.");
+    break;
+  case "Banana":
+    console.log("Bananas are $0.50 each.");
+    break;
+  case "Mango":
+    console.log("Mangoes are $1.50 each.");
+    break;
+  default:
+    console.log("Sorry, we don't have that fruit.");
+}
+In this example, the output will be:
+Mangoes are $1.50 each.
