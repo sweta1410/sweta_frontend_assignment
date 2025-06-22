@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main_wrapper">
+        <div id="slides_wrapper">
+          <div id="slides">
+            <!--main slides images-->
+            <img class="slide" src="https://thumbs.dreamstime.com/b/miniature-workers-helmets-stacking-oversized-cheeseburger-fresh-lettuce-tomatoes-melted-cheese-sesame-bun-playful-363228762.jpg" alt="" />
+            <img class="slide" src="https://images.getbento.com/accounts/a9557f94e91b365d1d35efa65fb2af99/media/images/43150BW_Website.jpg?w=1000&fit=max&auto=compress,format&cs=origin&h=1000" alt="" />
+            <img class="slide" src="https://www.foodandwine.com/thmb/ckc6L6xKox0WfpfO6dMkuVGPQOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Angel-Food-Cake-with-Three-Berry-Compote-FT-RECIPE0323-541a780b871441e0ab14383ee38acc44.jpg" alt="" />
+            <img class="slide" src="https://www.shutterstock.com/image-photo/fried-salmon-steak-cooked-green-600nw-2489026949.jpg" alt="" />
+            <img class="slide" src="https://learn.captureone.com/wp-content/uploads/sites/2/michaela-hartwig-food-styling-blog-post-capture-one-pro-raw-photo-editor-noodle-bowl-1.jpg" alt="" />
+            <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe724yGV-AOYl1LyCOM6MT6xKoy3jTIxp-uQ&s" alt="" />
+          </div>
+        </div>
+        <div id="thumbnails">
+          <div id="slide_left" class="slide_arrow"><span>&#10094;</span></div> <!--left Arrow-->
+          <!--thumbnail slides images-->
+          <img class="thumbnail active" src="https://thumbs.dreamstime.com/b/miniature-workers-helmets-stacking-oversized-cheeseburger-fresh-lettuce-tomatoes-melted-cheese-sesame-bun-playful-363228762.jpg" alt="" />
+          <img class="thumbnail active" src="https://images.getbento.com/accounts/a9557f94e91b365d1d35efa65fb2af99/media/images/43150BW_Website.jpg?w=1000&fit=max&auto=compress,format&cs=origin&h=1000" alt="" />
+          <img class="thumbnail active" src="https://www.foodandwine.com/thmb/ckc6L6xKox0WfpfO6dMkuVGPQOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Angel-Food-Cake-with-Three-Berry-Compote-FT-RECIPE0323-541a780b871441e0ab14383ee38acc44.jpg" alt="" />
+          <img class="thumbnail active" src="https://www.shutterstock.com/image-photo/fried-salmon-steak-cooked-green-600nw-2489026949.jpg" alt="" />
+          <img class="thumbnail active" src="https://learn.captureone.com/wp-content/uploads/sites/2/michaela-hartwig-food-styling-blog-post-capture-one-pro-raw-photo-editor-noodle-bowl-1.jpg" alt="" />
+          <img class="thumbnail active" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe724yGV-AOYl1LyCOM6MT6xKoy3jTIxp-uQ&s" alt="" />
+          <div id="slide_right" class="slide_arrow"><span>&#10095;</span></div><!--right Arrow-->
+        </div>
+      </div>  
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const leftArrow = document.querySelector('#slide_left');
+  const rightArrow = document.querySelector('#slide_right');
+  const slidesContainer = document.querySelector('#slides');
+
+  leftArrow.addEventListener('click', function() {
+    const last = slidesContainer.lastElementChild;
+    if (last) {
+      slidesContainer.prepend(last);
+    }
+  });
+
+  rightArrow.addEventListener('click', function() {
+    const first = slidesContainer.firstElementChild;
+    if (first) {
+      slidesContainer.append(first);
+    }
+  });
+
+  
+});
+</script>
+</html>
