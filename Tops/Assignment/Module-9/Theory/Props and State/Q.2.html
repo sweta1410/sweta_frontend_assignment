@@ -1,0 +1,23 @@
+Explain the concept of state in React and how it is used to manage component data.
+Ans. In React, state is a built-in object that allows components to store and manage 
+data that can change over time. It is a fundamental concept for building dynamic and 
+interactive user interfaces.
+
+How State Manages Component Data:
+Local to the Component:
+Each component instance on the screen has its own isolated state. 
+If a component is rendered multiple times, each instance will maintain its independent state. 
+
+Dynamic Data:
+State holds information that can change during the component's lifecycle, often in 
+response to user interactions (e.g., button clicks, form input), network requests, or 
+other events.
+
+Triggering Re-renders:
+When a component's state changes, React automatically re-renders that component 
+to reflect the updated data in the UI. This ensures the user interface stays in sync 
+with the underlying data. 
+
+Managing with Hooks (Functional Components):
+In modern React functional components, the useState Hook is used to declare and manage 
+state variables.

@@ -1,0 +1,32 @@
+How do you pass data to a component using props?
+Ans. React components use props to communicate with each other. Every parent component
+can pass some information to its child components by giving them props. Props might remind 
+you of HTML attributes, but you can pass any JavaScript value through them, including objects, 
+arrays, and functions.
+
+Passing props in JSX:
+Ex:
+function App() {
+  const user = { name: "SS", userId: "Xyz" };
+  return <Profile person={user} size={100} />;
+}
+
+Receiving props in the child:
+The child component receives a props object, which you can destructure:
+
+function Profile({ person, size }) {
+  return (
+    <div>
+      <img
+        src={`#`}
+        alt={person.name}
+        width={size}
+        height={size}
+      />
+      <h2>{person.name}</h2>
+    </div>
+  );
+}
+
+ Destructuring:
+ function Profile({ person, size = 80 }) 

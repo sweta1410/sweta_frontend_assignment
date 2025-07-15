@@ -1,0 +1,29 @@
+
+<!-- dashboard and artist styling -->
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  body{
+    background-color: aliceblue;
+  }
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  footer {
+    margin-top: 50px;
+  }
+
+  .section { 
+    display:none; 
+    margin-top:30px; 
+  
+  }
+  
+  .section.active { 
+    display:block; 
+  }
+  
+  

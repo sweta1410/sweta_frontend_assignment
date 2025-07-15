@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Artist Hub Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="container my-5">
+    <h2>Admin Dashboard</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card p-3">
+          <h5>Manage Artists</h5>
+          <button onclick="showSection('artistsSec')">Artists</button>
+          <div id="artistsSec" class="section">
+            <h2>Artists</h2>
+            <ul id="artistsList"></ul>
+            <h3>Add Artist (Pending Approval)</h3>
+            <form id="addArtistForm">
+              <input required placeholder="Artist Name" id="newArtistName">
+              <button type="submit">Submit for approval</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6 mb-4">
+        <div class="card p-3">
+          <h5>Manage Customers</h5>
+          <button onclick="showSection('customerSec')">Customers</button>
+          <div id="customerSec"  class="section"><h2>Customers</h2><ul id="customersList"></ul></div>
+        </div>
+      </div>
+  
+      <div class="col-md-6 mb-4">
+        <div class="card p-3">
+          <h5>View Bookings</h5>
+          <div id="bookingsSec" class="section"><h2>Bookings</h2><ul id="bookingsList"></ul></div>
+          <button onclick="showSection('bookingsSec')">View all</button>
+        </div>
+      </div>
+  
+      <div class="col-md-6 mb-4">
+        <div class="card p-3">
+          <h5>View Feedback</h5>
+          <div id="feedbackSec" class="section"><h2>Feedbacks</h2><ul id="feedbackList"></ul></div>
+          <button onclick="showSection('feedbackSec')">Feedbacks</button>
+        </div>
+      </div>
+    </div>
+  </section>  
+  <script src="script.js"></script>
+</body>
+</html>
