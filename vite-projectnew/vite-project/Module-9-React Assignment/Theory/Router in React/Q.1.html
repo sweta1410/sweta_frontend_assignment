@@ -1,0 +1,20 @@
+What is React Router? How does it handle routing in single-page applications?
+Ans. React Router is a standard library for routing in React applications, designed to handle client-side routing in single-page applications (SPAs).
+How React Router Handles Routing in SPAs
+
+In traditional multi-page applications, each navigation to a new page results in a full page reload, fetching a new HTML document from the server. In contrast, SPAs load a single HTML page and dynamically update the content as the user interacts with the app. React Router facilitates this behavior by managing the application's routing on the client side.
+Here's how React Router manages routing in SPAs:
+
+Client-Side Routing: React Router intercepts navigation events and updates the browser's history stack using the HTML5 History API. This allows the URL to change without triggering a full page reload.
+
+Route Matching: It matches the current URL to a set of defined routes and renders the corresponding React components. This is typically done using the <Routes> and <Route> components.
+
+Dynamic Rendering: Based on the matched route, React Router dynamically renders the appropriate component, allowing for a responsive and interactive user interface.
+
+Nested Routes: React Router supports nested routing, enabling the rendering of child components within parent components based on the URL structure.
+
+Programmatic Navigation: It provides hooks like useNavigate to navigate programmatically within the application, useful for redirecting users after certain actions like form submissions.
+
+URL Parameters and Query Strings: React Router allows access to URL parameters and query strings, facilitating dynamic content rendering based on the URL.
+
+SPA Mode Pre-Rendering: React Router's SPA Mode allows for pre-rendering of the root route at build time into an index.html file. This approach improves performance and enables features like data loading for the application shell and server rendering capabilities.
