@@ -1,0 +1,69 @@
+What are some common event handlers in React.js? Provide examples of
+onClick, onChange, and onSubmit.
+Ans. n React.js, event handlers are functions that respond to user interactions such 
+as clicks, input changes, and form submissions. These handlers are attached to JSX 
+elements using camelCase syntax (e.g., onClick, onChange, onSubmit) and are passed as 
+functions, not strings.
+
+1. onClick: Handling Button Clicks
+import React from 'react';
+
+function ClickButton() {
+  const handleClick = () => {
+    alert('Button clicked!');
+  };
+
+  return (
+    <button onClick={handleClick}>Click Me</button>
+  );
+}
+export default ClickButton;
+
+2.onChange: Handling Input Changes
+import React, { useState } from 'react';
+
+function TextInput() {
+  const [text, setText] = useState('');
+
+  const handleChange = (event) => {
+    setText(event.target.value);
+  };
+
+  return (
+    <div>
+      <input type="text" value={text} onChange={handleChange} />
+      <p>You typed: {text}</p>
+    </div>
+  );
+}
+
+export default TextInput;
+
+3.onSubmit: Handling Form Submissions
+import React, { useState } from 'react';
+
+function NameForm() {
+  const [name, setName] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevents the default form submission behavior
+    alert(`Submitted name: ${name}`);
+  };
+
+  <!-- return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Name:
+        <input 
+          type="text" 
+          value={name}
+          onChange={(e) => setName(e.target.value)} 
+        />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+export default NameForm;
+ -->

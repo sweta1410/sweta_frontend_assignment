@@ -1,0 +1,10 @@
+What is the purpose of useCallback & useMemo Hooks?
+Ans. useMemo
+
+Purpose: Caches (memoizes) the return value of a function across renders—not the function itself. You pass in a function that computes a value (often something expensive), and React only re-executes it if its dependencies change. 
+
+Use case: Avoid recalculating heavy computations repeatedly or prevent unnecessary object/array recreation that can lead to needless re-renders. 
+
+* useCallback
+Purpose: Memoizes a function definition itself (keeping its reference stable across renders), so that you can pass the same function instance downstream unless dependencies change. 
+Use case: When passing callbacks to optimized child components (like those wrapped in React.memo) or using callbacks as dependencies in other Hooks, and you want to prevent unnecessary re-renders triggered purely by a new function reference.

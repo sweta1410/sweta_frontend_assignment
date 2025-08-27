@@ -1,0 +1,54 @@
+What are React hooks? How do useState() and useEffect() hooks work in functional components?
+Ans. React Hooks are JavaScript functions that enable functional components to utilize React features previously exclusive to class components, such as state management and lifecycle methods. They promote cleaner, more reusable code by allowing the extraction of stateful logic and side effects.
+How useState() Works
+The useState() hook allows functional components to manage local state. It returns an array containing two elements:
+The current state value: This variable holds the actual data you want to manage.
+A setter function: This function is used to update the state value. When called, it triggers a re-render of the component with the new state.
+Example:
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0); // Initializes count to 0
+
+  <!-- return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+} -->
+How useEffect() Works
+The useEffect() hook handles side effects in functional components. Side effects are operations that interact with the outside world, such as data fetching, subscriptions, or manual DOM manipulations. It takes two arguments:
+A callback function: This function contains the logic for the side effect.
+An optional dependency array: This array specifies values that, when changed, should trigger a re-run of the effect. 
+Dependencies and Cleanup:
+Empty array ([]):
+The effect runs only once after the initial render, similar to componentDidMount.
+Array with dependencies ([dependency1, dependency2]):
+The effect runs after the initial render and whenever any of the specified dependencies change.
+Cleanup function:
+
+The useEffect hook can optionally return a cleanup function. This function runs before the effect re-runs (due to dependency changes) and when the component unmounts, allowing you to clean up resources like subscriptions or timers.
+Example:
+
+import React, { useState, useEffect } from 'react';
+
+function DataFetcher() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(json => setData(json));
+
+    return () => {
+    
+    };
+  }, []); // Empty dependency array means it runs only once on mount
+
+  return (
+    <div>
+      {data ? <p>Data: {JSON.stringify(data)}</p> : <p>Loading data...</p>}
+    </div>
+  );
+}

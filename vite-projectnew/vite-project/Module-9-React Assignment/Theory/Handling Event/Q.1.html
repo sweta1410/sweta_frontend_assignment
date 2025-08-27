@@ -1,0 +1,45 @@
+How are events handled in React compared to vanilla JavaScript? 
+Explain the concept of synthetic events.
+Ans. 1. Abstraction and Synthetic Event System:
+Vanilla JavaScript: Events are handled directly using native browser APIs like 
+addEventListener to attach event listeners to DOM elements. The event object
+passed to the handler is the native browser event.
+
+    document.getElementById('myButton').addEventListener('click', function(event) {
+        console.log('Button clicked!', event);
+    });
+
+React: React implements a "Synthetic Event System" that wraps native browser events into 
+a cross-browser compatible SyntheticEvent object. This system provides a consistent 
+interface for events across different browsers, abstracting away browser-specific quirks. 
+Event listeners are attached declaratively within JSX.
+
+    <!-- <button onClick={(event) => console.log('Button clicked!', event)}>
+        Click Me
+    </button> -->
+
+2. Syntax and Declarative Nature:
+Vanilla JavaScript: Event listeners are typically added imperatively, often after the 
+DOM elements have been rendered.
+
+    const button = document.createElement('button');
+    button.textContent = 'Click Me';
+    document.body.appendChild(button);
+    button.addEventListener('click', handleClick);
+React: Event handlers are defined declaratively as props on JSX elements, using camelCase 
+naming conventions (e.g., onClick, onChange). This integrates event handling directly into 
+the component's structure.
+
+    <!-- function MyComponent() {
+        const handleClick = (event) => {
+            console.log('Clicked!');
+        };
+        return <button onClick={handleClick}>Click Me</button>;
+    } -->
+
+* Synthetic Events:-
+Synthetic Events in React are objects that wrap around the browser's native events, 
+providing a consistent API across all browsers. They mirror the W3C spec for native 
+events and include standard methods like preventDefault() and stopPropagation(). 
+This design allows developers to write uniform event-handling code without worrying 
+about browser inconsistencies.

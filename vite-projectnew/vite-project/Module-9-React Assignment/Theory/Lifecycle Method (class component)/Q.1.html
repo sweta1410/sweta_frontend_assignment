@@ -1,0 +1,25 @@
+What are lifecycle methods in React class components? Describe the phases of a 
+component’s lifecycle.
+Ans. Lifecycle methods in React class components are special methods invoked at 
+specific points during a component's existence. These methods allow developers to 
+control and react to changes in a component's state and props throughout its lifecycle.
+
+* The lifecycle of a React component is divided into three main phases: 
+Mounting:
+This phase occurs when an instance of a component is created and inserted into the DOM.
+constructor(): The first method called when a component is created. Used for initializing state and binding event handlers. 
+static getDerivedStateFromProps(): Called right before calling the render method, both on initial mount and on subsequent updates. It's used to update state based on changes in props.
+render(): Returns the JSX that defines the component's UI. It is a pure function and should not cause side effects.
+componentDidMount(): Invoked immediately after a component is mounted (inserted into the DOM). This is a good place for data fetching, setting up subscriptions, or interacting with the DOM directly.
+
+Updating:
+This phase occurs when a component's state or props change, leading to a re-render.
+static getDerivedStateFromProps(): (As described above)
+shouldComponentUpdate(): Called before rendering when new props or state are being received. It allows you to optimize performance by preventing unnecessary re-renders if the component's output will not change.
+render(): (As described above)
+getSnapshotBeforeUpdate(): Called right before the changes from the virtual DOM are reflected in the actual DOM. It allows capturing information from the DOM (e.g., scroll position) before it's potentially altered.
+componentDidUpdate(): Invoked immediately after updating occurs. This is where you can perform side effects that depend on the updated DOM.
+
+Unmounting:
+This phase occurs when a component is removed from the DOM. 
+componentWillUnmount(): Invoked immediately before a component is unmounted and destroyed. This is the place to perform cleanup tasks like canceling network requests, removing event listeners, or clearing timers.

@@ -1,0 +1,17 @@
+Whats the Difference between the useCallback & useMemo Hooks?
+Ans. useMemo memoizes values. It takes a function and an array of dependencies. 
+It then executes the function and returns the result of that function. This result 
+is cached and only re-computed if any of the dependencies in the array change. 
+This is useful for optimizing expensive calculations or data transformations.
+
+    const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+useCallback memoizes functions. It takes a function and an array of dependencies. 
+It then returns a memoized version of that function. This memoized function reference 
+remains the same across re-renders as long as its dependencies do not change. 
+This is primarily used to prevent unnecessary re-renders of child components that 
+receive functions as props, especially when those child components are also memoized.
+
+    const memoizedCallback = useCallback(() => {
+      doSomething(a, b);
+    }, [a, b]);

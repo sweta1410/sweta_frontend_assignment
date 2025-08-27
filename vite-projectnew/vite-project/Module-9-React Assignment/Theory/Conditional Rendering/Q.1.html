@@ -1,0 +1,101 @@
+What is conditional rendering in React? How can you conditionally render elements in a React component?
+Ans. Conditional rendering in React refers to the process of dynamically displaying different UI 
+elements or components based on certain conditions. This allows for the creation of interactive 
+and responsive user interfaces that adapt to various states, user interactions, or data. 
+
+Common Techniques for Conditional Rendering
+if / else Statements
+Use traditional JavaScript control flow to determine what to render:
+
+function Greeting({ isLoggedIn }) {
+  if (isLoggedIn) {
+    return <h1>Welcome back!</h1>;
+  } else {
+    return <h1>Please sign up.</h1>;
+  }
+}
+
+This approach is straightforward and useful for rendering entirely different components based on a condition.
+
+Ternary Operator (condition ? expr1 : expr2)
+A concise way to render one of two elements:
+function Greeting({ isLoggedIn }) {
+  return (
+    <div>
+      {isLoggedIn ? <h1>Welcome back!</h1> : <h1>Please sign up.</h1>}
+    </div>
+  );
+}
+
+Ideal for simple conditions where you need to choose between two elements.
+
+Logical AND (&&) Operator
+Render an element only if a condition is true:
+function Mailbox({ unreadMessages }) {
+  return (
+    <div>
+      <h1>Hello!</h1>
+      {unreadMessages.length > 0 && (
+        <h2>You have {unreadMessages.length} unread messages.</h2>
+      )}
+    </div>
+  );
+}
+
+This method is useful for conditionally including elements without an else case.
+
+Switch Statements
+Handle multiple conditions more cleanly:
+function StatusMessage({ status }) {
+  switch (status) {
+    case 'loading':
+      return <p>Loading...</p>;
+    case 'error':
+      return <p>Error occurred.</p>;
+    default:
+      return <p>All systems go!</p>;
+  }
+}
+
+Useful when dealing with multiple distinct conditions.
+
+Returning null
+Prevent rendering by returning null:
+
+function WarningBanner({ warn }) {
+  if (!warn) {
+    return null;
+  }
+  return <div className="warning">Warning!</div>;
+}
+
+This approach is helpful when you want to hide a component entirely.
+
+Element Variables
+Assign JSX to a variable and conditionally render it:
+
+function LoginControl({ isLoggedIn }) {
+  let button;
+  if (isLoggedIn) {
+    button = <LogoutButton />;
+  } else {
+    button = <LoginButton />;
+  }
+  return <div>{button}</div>;
+}
+
+This method can improve readability when dealing with more complex rendering logic.
+
+Immediately Invoked Function Expressions (IIFE)
+Use an IIFE for more complex conditions within JSX:
+function ShowContent({ isPremiumUser }) {
+  return (
+    <div>
+      {(() => {
+        if (isPremiumUser) return <h2>Premium Content</h2>;
+        return <h2>Regular Content</h2>;
+      })()}
+    </div>
+  );
+}
+

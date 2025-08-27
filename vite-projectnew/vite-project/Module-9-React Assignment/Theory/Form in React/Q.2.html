@@ -1,0 +1,32 @@
+What is the difference between controlled and uncontrolled components in React?
+Ans. Controlled Components:
+State Management:
+The form data is entirely controlled by React state. The component's state is the 
+single source of truth for the input's value.
+
+Data Flow:
+The input's value is passed down as a prop from a parent component, and changes 
+are handled by an onChange event handler that updates the parent's state.
+
+Predictability:
+The component's behavior is highly predictable because its value is always dictated 
+by the React state.
+Advantages:
+Easier to implement validation, real-time feedback, and manipulate the input's 
+value programmatically.
+
+* Uncontrolled Components:
+State Management:
+The form data is handled by the DOM itself, similar to how traditional HTML forms 
+work. The component manages its own internal state.
+
+Data Access:
+To access the input's value, you typically use refs to directly interact with the 
+DOM element.
+
+Less Predictability:
+The component's value is managed internally by the DOM, making it less predictable 
+and harder to control programmatically.
+Advantages:
+Can be simpler to implement for very basic forms where real-time validation or 
+complex data manipulation is not required.

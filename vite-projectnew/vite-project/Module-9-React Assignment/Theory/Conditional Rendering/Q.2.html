@@ -1,0 +1,39 @@
+Explain how if-else, ternary operators, and && (logical AND) are used in JSX for conditional rendering.
+Ans. 1. if-else Statements
+Use if-else statements when you need to render different components or elements based
+on a condition.
+
+function Greeting({ isLoggedIn }) {
+  if (isLoggedIn) {
+    return <h1>Welcome back!</h1>;
+  } else {
+    return <h1>Please sign up.</h1>;
+  }
+}
+This approach is straightforward and is useful for more complex conditions or when multiple 
+branches are needed.
+
+2. Ternary Operator (condition ? expr1 : expr2)
+The ternary operator is a concise way to render one of two elements based on a condition.
+function Greeting({ isLoggedIn }) {
+  return (
+    <div>
+      {isLoggedIn ? <h1>Welcome back!</h1> : <h1>Please sign up.</h1>}
+    </div>
+  );
+}
+This method is ideal for simple conditions and inline rendering.
+
+
+3. Logical AND (&&) Operator
+The && operator renders an element only if the condition is true.
+function Mailbox({ unreadMessages }) {
+  return (
+    <div>
+      <h1>Hello!</h1>
+      {unreadMessages.length > 0 && (
+        <h2>You have {unreadMessages.length} unread messages.</h2>
+      )}
+    </div>
+  );
+}

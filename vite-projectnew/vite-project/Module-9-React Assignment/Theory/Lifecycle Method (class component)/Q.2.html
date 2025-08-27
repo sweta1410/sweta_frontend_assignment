@@ -1,0 +1,20 @@
+Explain the purpose of componentDidMount(), componentDidUpdate(), and componentWillUnmount().
+Ans. The componentDidMount(), componentDidUpdate(), and componentWillUnmount() methods are lifecycle methods in React class components, each serving a specific purpose during a component's lifecycle:
+componentDidMount():
+This method is invoked immediately after a component is mounted (inserted into the DOM). It is commonly used for:
+Data Fetching: Making API calls to fetch initial data for the component.
+DOM Manipulation: Interacting with the DOM directly, as the component's elements are now available.
+Setting up Subscriptions/Timers: Initiating subscriptions to external data sources or setting up timers.
+
+componentDidUpdate():
+This method is invoked immediately after updating occurs, meaning after a component's state or props have changed and the component has re-rendered. It receives the previous props and state as arguments, allowing for:
+Performing Side Effects based on Updates: Executing code that depends on the updated state or props, such as re-fetching data or updating external libraries.
+Conditional Logic: Comparing current props/state with previous props/state to perform actions only when specific changes occur.
+
+componentWillUnmount():
+This method is invoked immediately before a component is unmounted and destroyed (removed from the DOM). It is primarily used for:
+Cleanup Tasks: Releasing resources to prevent memory leaks, such as:
+Clearing timers or intervals set in componentDidMount().
+Canceling network requests.
+Removing event listeners.
+Unsubscribing from external data sources.

@@ -1,0 +1,26 @@
+Why do you need to bind event handlers in class components?
+Ans. In React class components, binding event handlers is essential due to the
+way JavaScript handles the this keyword. When you pass a method like this.handleClick as 
+a callback (e.g., to an onClick prop), the method loses its original context unless 
+explicitly bound. This means that inside the method, this may be undefined or refer to 
+an unexpected object, leading to errors when trying to access component properties or state.
+
+This behavior stems from JavaScript's function invocation patterns, not React itself. 
+In JavaScript, the value of this inside a function depends on how the function is called. 
+When a method is used as a callback, it often loses its context, resulting in this being 
+undefined or pointing to the global object.
+Ex.
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    // 'this' correctly refers to the component instance
+  }
+
+  render() {
+    return <button onClick={this.handleClick}>Click me</button>;
+  }
+}

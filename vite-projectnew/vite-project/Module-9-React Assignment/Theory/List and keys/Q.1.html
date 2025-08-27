@@ -1,0 +1,38 @@
+How do you render a list of items in React? Why is it important to use keys when rendering lists?
+Ans. How to Render a List of Items in React
+example:
+
+function ListComponent({ items }) {
+  return (
+    <ul>
+      {items.map(item => (
+        <li key={item.id}>{item.text}</li>
+      ))}
+    </ul>
+  );
+}
+You call .map() on the array (e.g. items.map(...)).
+
+Inside the callback, you return a JSX element for each item.
+The resulting list of JSX nodes is rendered directly inside, for example, a <ul>.
+This pattern is widely shown in Reacts official documentation and tutorials. 
+
+Why You Should Use key When Rendering Lists
+React requires a key prop on each item in a list. Here's why it's so important:
+
+1. Helps React Track Changes Efficiently
+React uses the key to determine which items were added, changed, or removed between 
+renders. This allows it to update only whats necessary in the DOM, rather than 
+re-rendering everything.
+
+2. Enables Predictable Updates When List Changes
+Without stable keys, React may mix up item order or incorrectly reuse components. 
+This could lead to confusing UI bugs or wrongly maintained internal state. 
+
+3. Improved Performance
+Using reliable keys (like unique IDs) avoids unnecessary remounting of components. 
+If you use array indices as keys and then reorder or modify the list, React may waste effort recreating elements, degrading performance. 
+
+4. Clarifies Intention — Developer-Friendly
+Think of keys like stable street addresses for houses on a moving street. 
+Without a consistent key, React cant confidently track the identity of each item.

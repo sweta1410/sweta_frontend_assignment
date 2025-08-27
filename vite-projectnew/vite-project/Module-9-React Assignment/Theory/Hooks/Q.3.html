@@ -1,0 +1,39 @@
+What is useReducer ? How we use in react app?
+Ans. useReducer is a React Hook that provides an alternative to useState for managing state in functional components, particularly useful for more complex state logic where state transitions depend on the previous state or involve multiple related values. It offers a more predictable and organized way to handle state updates, akin to how Redux manages state.
+How to use useReducer in a React App:
+Import useReducer: Begin by importing the useReducer Hook from React.
+
+    import React, { useReducer } from 'react';
+Define a Reducer Function: Create a pure function called a "reducer." This function takes two arguments: the current state and an action object. It then returns a new state based on the action, without modifying the original state.
+JavaScript
+
+    const reducer = (state, action) => {
+      switch (action.type) {
+        case 'INCREMENT':
+          return { count: state.count + 1 };
+        case 'DECREMENT':
+          return { count: state.count - 1 };
+        default:
+          return state;
+      }
+    };
+Initialize useReducer: Call useReducer within your functional component, passing the reducer function and an initialState value. It returns an array containing the current state and a dispatch function. 
+
+    const initialState = { count: 0 };
+
+    function Counter() {
+      const [state, dispatch] = useReducer(reducer, initialState);
+    }
+Dispatch Actions: To update the state, call the dispatch function, passing an action object. The action object typically has a type property indicating the type of state change and can also include a payload for any data needed by the reducer.
+
+    function Counter() {
+      const [state, dispatch] = useReducer(reducer, initialState);
+
+      <!-- return (
+        <div>
+          <p>Count: {state.count}</p>
+          <button onClick={() => dispatch({ type: 'INCREMENT' })}>Increment</button>
+          <button onClick={() => dispatch({ type: 'DECREMENT' })}>Decrement</button>
+        </div>
+      );
+    } -->

@@ -1,0 +1,12 @@
+What is the role of render() in class components?
+Returns JSX or React Elements: The render() method must return a single React element, 
+which can be JSX, a string, a number, null, or an array of elements. This output dictates 
+what appears in the UI. 
+
+Pure Function: It should be a pure function, meaning it doesn't modify the component's 
+state or interact with the browser directly. This ensures consistent and predictable UI 
+rendering. 
+
+Automatic Invocation: React automatically calls render() during the component's 
+lifecycle, such as after mounting, updating, or when setState() is invoked. 
+This keeps the UI in sync with the component's data. 

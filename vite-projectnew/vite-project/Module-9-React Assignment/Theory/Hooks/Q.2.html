@@ -1,0 +1,32 @@
+What problems did hooks solve in React development? Why are hooks considered an important addition to React?
+Ans. Problems Hooks Addressed
+1. Hard to Reuse Stateful Logic
+Before Hooks, sharing stateful behavior between components required patterns like render props or higher-order components (HOCs). These patterns often led to complex nesting—so-called "wrapper hell"—and fragile code structures. Hooks allow extracting and reusing logic without altering the component hierarchy.
+
+2. Complex Components with Mixed Lifecycle Logic
+Class components grouped unrelated logic across lifecycle methods. For example, some logic would go in componentDidMount, others in componentDidUpdate, or cleanup in componentWillUnmount. This scattering made—especially as components grew—maintenance, testing, and readability difficult. Hooks (like useEffect) let you group related logic into separate, cohesive blocks.
+
+3. Classes Confuse Both Developers and Tools
+Using classes means dealing with this binding issues, verbosity, and context confusion. Beyond developer experience, class components also hinder optimizations and tooling (like minification and hot reloading). Hooks eliminate the need for classes, embracing simpler, more functional patterns.
+
+Why Hooks Are a Major Improvement
+1. Cleaner, More Readable Code
+Functional components with Hooks are more concise and readable than their class-based counterparts. No this binding, no constructors—just clear state logic using hooks like useState.
+
+2. Better Side-Effect Management
+useEffect consolidates what used to be spread across multiple lifecycle methods into a single, logical block. It also simplifies cleanup via a return function.
+
+3. Enhanced Code Reusability through Custom Hooks
+Hooks enable encapsulating behavior into reusable, testable functions—custom hooks—without altering component structure. Makes sharing logic a breeze.
+
+4. Simplified Testing
+Functional components and custom hooks are easier to test—no need to simulate class behavior or lifecycle intricacies; you can test hooks in isolation.
+
+5. Performance Optimizations
+You can optimize render performance using hooks like useMemo and useCallback. Functional components themselves also tend to be lighter and faster.
+
+6. Better Separation of Concerns
+Hooks enable organizing code around functionality rather than lifecycle phases. This modular approach improves maintainability.
+
+7. Aligns with Functional Programming Trends
+Hooks reinforce React's functional roots, aligning well with modern JavaScript practices and enabling more consistent tooling.
